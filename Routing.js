@@ -1,4 +1,5 @@
 import React from 'react'
+import Practice from "./Practice"
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 
 const Deafult = () => <div className="container"><h1> Welcome to Broo !</h1></div>
@@ -11,13 +12,19 @@ function Routing() {
     
     <Router>
             <div >
-                
-                <Link to="/" > React </Link>
-                <Link to="/contact" > Contact</Link>
-
+                <button>
+                    <Link to="/" > React </Link>
+                </button>
+                <button>
+                    <Link to="/practice" > Practice </Link>
+                </button>
+                <button>
+                    <Link to="/contact" > Contact </Link>
+                </button>
             </div>
         <Routes>
             <Route path="/" element={<Deafult />}></Route>
+            <Route path="/practice" element={<Practice />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="*" element={<Error />}></Route>
         </Routes>
